@@ -1,0 +1,126 @@
+/* Bright orange: hsl(31, 77%, 52%)
+Dark cyan: hsl(184, 100%, 22%)
+Very dark cyan: hsl(179, 100%, 13%)
+Transparent white (paragraphs): hsla(0, 0%, 100%, 0.75)
+Very light gray (background, headings, buttons): hsl(0, 0%, 95%) */
+
+@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&family=Lexend+Deca&display=swap');
+body {
+    font-family: 'Big Shoulders Display', cursive;
+    font-family: 'Lexend Deca', sans-serif;
+    /* so do these two different kinds of fonts need to be under two different font-family identifiers?? */
+    background: var(--Very-light-gray);
+}
+
+:root {
+    --Bright-orange: hsl(31, 77%, 52%);
+    --Dark-cyan: hsl(184, 100%, 22%);
+    --Very-dark-cyan: hsl(179, 100%, 13%);
+    --Transparent-white: hsla(0, 0%, 100%, 0.75);
+    --Very-light-gray: hsl(0, 0%, 95%);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.card {
+    width: 300px;
+    margin: 80px auto 80px;
+    /* When we set margin to auto that centers our div */
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.Sedan-block {
+    background: var(--Bright-orange);
+    border-radius: 10px 10px 0 0;
+}
+
+.SUV-block {
+    background: var(--Dark-cyan);
+}
+
+.Luxury-block {
+    background: var(--Very-dark-cyan);
+    border-radius: 0 0 10px 10px;
+}
+
+.Sedan-block,
+.SUV-block,
+.Luxury-block {
+    height: 420px;
+}
+
+p {
+    font-family: 'lexend Deca';
+    line-height: 1.9;
+    color: var(--Transparent-white);
+}
+
+h1 {
+    font-family: 'Big Shoulders Display';
+    font-size: 2.2rem;
+    color: var(--Very-light-gray);
+    text-transform: uppercase;
+}
+
+.cars-text {
+    margin: 30px;
+}
+
+img {
+    margin-top: 40px;
+    margin-left: 30px;
+}
+
+button {
+    color: var(--Dark-cyan);
+    background-color: var(--Transparent-white);
+    border-radius: 30px;
+    border: none;
+    margin-left: 30px;
+    text-align: center;
+    font-size: 1rem;
+    padding: 14px 18px 14px 18px;
+}
+
+.SUV-button {
+    color: var(--Dark-cyan);
+}
+
+.Sedan-button {
+    color: var(--Bright-orange);
+}
+
+.Luxury-button {
+    color: var(--Very-dark-cyan);
+}
+
+@media (min-width:1140px) {
+    .card {
+        display: flex;
+        flex-direction: row;
+        width: 1000px;
+    }
+    .Sedan-block,
+    .SUV-block,
+    .Luxury-block {
+        height: 400px;
+    }
+    .SUV-block {
+        border-radius: none;
+    }
+    .Sedan-block {
+        border-radius: 10px 0 0 10px;
+    }
+    .Luxury-block {
+        border-radius: 0 10px 10px 0;
+    }
+}
+
+
+}
